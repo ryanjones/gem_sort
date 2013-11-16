@@ -1,9 +1,10 @@
 class Gem < Joybox::Core::Sprite
-  attr_accessor :movable, :home_position
+  attr_accessor :movable, :home_position, :name
 
   def initialize(opts={})
     super frame_name: opts[:frame_name], position: opts[:position]
     self.home_position = opts[:home_position]
+    self.name = opts[:frame_name]
   end
 
 

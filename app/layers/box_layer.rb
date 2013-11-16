@@ -13,10 +13,6 @@ class BoxLayer < Joybox::Core::Layer
 
 
     @wood_block = Bucket.new({frame_name: 'Wood Block.png', position: [300,300], home_position: [100,100]})
-
-
-    self.add_child(@wood_block)
-
     @gem_green = Gem.new({frame_name: 'Gem Green.png', position: [100,200], home_position: [100,200]})
     @gem_blue = Gem.new({frame_name: 'Gem Blue.png', position: [100,300], home_position: [100,300]})
     @gem_orange = Gem.new({frame_name: 'Gem Orange.png', position: [100,100], home_position: [100,100]})
@@ -25,6 +21,11 @@ class BoxLayer < Joybox::Core::Layer
     @sprite_batch << @gem_blue
     @sprite_batch << @gem_orange
     @sprite_batch << @wood_block
+
+    self.reorderChild(@gem_green, z: 10)
+    self.reorderChild(@gem_blue, z: 10)
+    self.reorderChild(@gem_orange, z: 10)
+    self.reorderChild(@wood_block, z: 1)
 
     @gems = Array.new
     [@gem_green, @gem_blue, @gem_orange].each do |g|
@@ -43,7 +44,10 @@ class BoxLayer < Joybox::Core::Layer
     on_touches_moved do |touches, event|
       touch = touches.any_object
       @gems.each do |g|
-        g.position = touch.location if g.movable == true
+        if g.movable == true
+          g.position = touch.location
+          self.reorderChild(g, z: 100)
+        end
       end
     end
 
@@ -54,6 +58,7 @@ class BoxLayer < Joybox::Core::Layer
           move_to_action = Move.to position: g.home_position
           g.run_action move_to_action
           g.movable = false
+          self.reorderChild(g, z: 10)
         end
       end
     end
