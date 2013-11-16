@@ -37,7 +37,16 @@ class BoxLayer < Joybox::Core::Layer
     on_touches_began do |touches, event|
       touch = touches.any_object
       @gems.each do |g|
-        g.movable = true if g.touched?(touch.location)
+        if g.touched?(touch.location)
+          g.movable = true
+
+          # extend sprite bathc to redraw the child
+          @sprite_batch.removeChild(g)
+          @sprite_batch << g
+
+          #store the z index on the child so we can always know the z index
+          self.reorderChild(g, z: 100)
+        end
       end
     end
 
@@ -46,7 +55,6 @@ class BoxLayer < Joybox::Core::Layer
       @gems.each do |g|
         if g.movable == true
           g.position = touch.location
-          self.reorderChild(g, z: 100)
         end
       end
     end
@@ -58,7 +66,6 @@ class BoxLayer < Joybox::Core::Layer
           move_to_action = Move.to position: g.home_position
           g.run_action move_to_action
           g.movable = false
-          self.reorderChild(g, z: 10)
         end
       end
     end
