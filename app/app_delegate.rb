@@ -12,8 +12,8 @@ class AppDelegate
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.setRootViewController(@navigation_controller)
     @window.makeKeyAndVisible
-    
-    @director.push_scene BoxLayer.scene
+
+    @director.push_scene StarMatchLayer.scene
     true
   end
 
