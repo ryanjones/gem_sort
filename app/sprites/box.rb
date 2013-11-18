@@ -10,5 +10,4 @@ class Box < Joybox::Core::Sprite
     rect = CGRect.new(boundingBox.origin, boundingBox.size)
     CGRectContainsPoint(rect, touch_location)
   end
-
 end

@@ -62,14 +62,23 @@ class StarMatchLayer < Joybox::Core::Layer
 
     on_touches_ended do |touches, event|
       touch = touches.any_object
+      movable_star = nil
+      touched_box = nil
+
       @stars.each do |s|
-        if s.movable && touching_matched_box(s, touch)
-          sprite_remove(s)
-          @stars.delete(s)
-        else
-          move_to_action = Move.to position: s.home_position
-          s.run_action move_to_action
-          s.movable = false
+        movable_star = s if s.movable
+      end
+      matched_box = touching_matched_box(movable_star, touch) if movable_star
+
+      if matched_box && movable_star && matched_box.colour == movable_star.colour
+        sprite_remove(movable_star)
+        @stars.delete(movable_star)
+        game_ended?
+      else
+        if movable_star
+          move_to_action = Move.to position: movable_star.home_position
+          movable_star.run_action move_to_action
+          movable_star.movable = false
         end
       end
     end
@@ -105,7 +114,12 @@ class StarMatchLayer < Joybox::Core::Layer
       touched_box = b if b.touched?(touch.location)
     end
 
-    return true if touched_box.colour == sprite.colour
-    false
+    return touched_box if touched_box && touched_box.colour == sprite.colour
+    nil
+  end
+
+  def game_ended?
+    @director = Joybox.director
+    @director.replace_scene StarMatchLayer.scene if @stars.empty?
   end
 end
