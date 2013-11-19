@@ -2,13 +2,20 @@ class StarMatchLayer < Joybox::Core::Layer
   scene
 
   def on_enter
+    setup_sounds
     load_sprite_sheet
     handle_touches
   end
 
+  def setup_sounds
+    @audio_effect = AudioEffect.new
+    @audio_effect.add(effect: :hit, file_name: 'sounds/hit.caf')
+    @audio_effect.add(effect: :miss, file_name: 'sounds/miss.caf')
+  end
+
   def load_sprite_sheet
-    SpriteFrameCache.frames.add file_name: "sprites/stars.plist"
-    @sprite_batch = SpriteBatch.new file_name: "sprites/stars.png"
+    SpriteFrameCache.frames.add file_name: 'sprites/stars.plist'
+    @sprite_batch = SpriteBatch.new file_name: 'sprites/stars.png'
     self << @sprite_batch
 
     @box_green = Box.new({frame_name: 'green_box.png', position: [900,200], colour: 'green'})
@@ -73,9 +80,11 @@ class StarMatchLayer < Joybox::Core::Layer
       if matched_box && movable_star && matched_box.colour == movable_star.colour
         sprite_remove(movable_star)
         @stars.delete(movable_star)
+        @audio_effect.play :hit
         game_ended?
       else
         if movable_star
+          @audio_effect.play :miss
           move_to_action = Move.to position: movable_star.home_position
           movable_star.run_action move_to_action
           movable_star.movable = false

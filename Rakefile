@@ -5,7 +5,7 @@ require 'joybox'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
-  app.name = 'gem_sort'
+  app.name = 'Star Sorter'
   app.device_family = :ipad
   app.interface_orientations = [:landscape_left]
   app.provisioning_profile = '/users/ryan/Library/MobileDevice/Provisioning Profiles/5A149555-18D4-4ABA-AF23-814FD2524964.mobileprovision'
