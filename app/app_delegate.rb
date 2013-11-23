@@ -13,7 +13,7 @@ class AppDelegate
     @window.setRootViewController(@navigation_controller)
     @window.makeKeyAndVisible
 
-    @director.push_scene StarMatchLayer.scene
+    @director.push_scene HomeLayer.scene
     true
   end
 

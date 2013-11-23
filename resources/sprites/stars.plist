@@ -4,10 +4,23 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>back.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{278,2},{123,52}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{123,52}}</string>
+                <key>sourceSize</key>
+                <string>{123,52}</string>
+            </dict>
             <key>blue_box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{233,197},{229,193}}</string>
+                <string>{{128,96},{229,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>green_box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{278,2},{229,193}}</string>
+                <string>{{233,291},{229,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -56,10 +69,23 @@
                 <key>sourceSize</key>
                 <string>{90,92}</string>
             </dict>
+            <key>level_1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,96},{124,93}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{124,93}}</string>
+                <key>sourceSize</key>
+                <string>{124,93}</string>
+            </dict>
             <key>red_box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,197},{229,193}}</string>
+                <string>{{2,291},{229,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -92,7 +118,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:bc23210a87eee9e7c2230af0d3c5e5c1:342f2020e293faf7f94f4462cfea8e2d:a283aa680c40f7aba299fc6537de2290$</string>
+            <string>$TexturePacker:SmartUpdate:eb96f9f8c915ff10fcd9d33c1b266c9b:e27e3050ec0c415f823033427a017a20:a283aa680c40f7aba299fc6537de2290$</string>
             <key>textureFileName</key>
             <string>stars.png</string>
         </dict>

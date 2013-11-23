@@ -29,12 +29,15 @@ class StarMatchLayer < Joybox::Core::Layer
     @star_red = Star.new({frame_name: 'red_star.png', position: [100,100],
                              colour: 'red', home_position: [100,100]})
 
+    @back_button = BackButton.new({frame_name: 'back.png', position: [100,700]})
+
     @sprite_batch << @star_green
     @sprite_batch << @star_blue
     @sprite_batch << @star_red
     @sprite_batch << @box_green
     @sprite_batch << @box_blue
     @sprite_batch << @box_red
+    @sprite_batch << @back_button
 
     @stars = Array.new
     [@star_green, @star_blue, @star_red].each do |s|
@@ -55,6 +58,10 @@ class StarMatchLayer < Joybox::Core::Layer
           s.movable = true
           sprite_to_front(s)
         end
+      end
+
+      if @back_button.touched?(touch.location)
+        @back_button.load_home
       end
     end
 
@@ -128,7 +135,6 @@ class StarMatchLayer < Joybox::Core::Layer
   end
 
   def game_ended?
-    @director = Joybox.director
-    @director.replace_scene StarMatchLayer.scene if @stars.empty?
+    Joybox.director.replace_scene StarMatchLayer.scene if @stars.empty?
   end
 end
