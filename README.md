@@ -1,6 +1,6 @@
-gem_sort (Star Sorter)
+Star Sorter (gem_sort)
 ========
 
-A Rubymotion gem sorting game built w/ Joybox 
+A Rubymotion star sorting game built w/ Joybox 
 
-Allows for 3 stars to be dragged into 3 boxes (colour matching).
+Allows for 3 different coloured stars to be dragged into 3 different coloured boxes (colour matching).
