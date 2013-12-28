@@ -4,3 +4,13 @@ Star Sorter (gem_sort)
 A Rubymotion star sorting game built w/ Joybox 
 
 Allows for 3 different coloured stars to be dragged into 3 different coloured boxes (colour matching).
+
+Screenshots
+========
+
+Level select:
+![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/level_select.png)
+
+Drag and drop the star onto the correct colour
+![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/star_drop.png)
+
