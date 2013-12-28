@@ -9,8 +9,8 @@ Screenshots
 ========
 
 Level select:
-![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/level_select.png?raw=true)
+![](https://github.com/RyanonRails/gem_sort/blob/master/screenshots/level_select.png?raw=true)
 
 Drag and drop the stars onto the correctly coloured box:
-![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/star_drop.png?raw=true)
+![](https://github.com/RyanonRails/gem_sort/blob/master/screenshots/star_drop.png?raw=true)
 
