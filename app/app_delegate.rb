@@ -13,7 +13,7 @@ class AppDelegate
     @window.setRootViewController(@navigation_controller)
     @window.makeKeyAndVisible
 
-    @director.push_scene HomeLayer.scene
+    @director.push_scene MenuLayer.scene
     true
   end
 

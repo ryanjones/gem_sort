@@ -4,10 +4,23 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>about.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{231,79}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{231,79}}</string>
+                <key>sourceSize</key>
+                <string>{231,79}</string>
+            </dict>
             <key>back.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{278,2},{123,52}}</string>
+                <string>{{2,83},{123,52}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +33,7 @@
             <key>blue_box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{128,96},{229,193}}</string>
+                <string>{{2,137},{229,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>blue_star.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{90,92}}</string>
+                <string>{{2,332},{90,92}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>green_box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{233,291},{229,193}}</string>
+                <string>{{2,426},{229,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>green_star.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{94,2},{90,92}}</string>
+                <string>{{2,621},{90,92}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>level_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,96},{124,93}}</string>
+                <string>{{94,621},{124,93}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>red_box.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,291},{229,193}}</string>
+                <string>{{2,716},{229,193}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +111,7 @@
             <key>red_star.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{186,2},{90,92}}</string>
+                <string>{{2,911},{90,92}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -108,6 +121,19 @@
                 <key>sourceSize</key>
                 <string>{90,92}</string>
             </dict>
+            <key>start.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{94,911},{159,79}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{159,79}}</string>
+                <key>sourceSize</key>
+                <string>{159,79}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -116,9 +142,9 @@
             <key>realTextureFileName</key>
             <string>stars.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{256,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:eb96f9f8c915ff10fcd9d33c1b266c9b:e27e3050ec0c415f823033427a017a20:a283aa680c40f7aba299fc6537de2290$</string>
+            <string>$TexturePacker:SmartUpdate:214411801d2504b508714950ebd3a651:66b119a56d009a912bad6508c8b7016b:a283aa680c40f7aba299fc6537de2290$</string>
             <key>textureFileName</key>
             <string>stars.png</string>
         </dict>

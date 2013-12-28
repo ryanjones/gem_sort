@@ -29,7 +29,7 @@ class StarMatchLayer < Joybox::Core::Layer
     @star_red = Star.new({frame_name: 'red_star.png', position: [100,100],
                              colour: 'red', home_position: [100,100]})
 
-    @back_button = BackButton.new({frame_name: 'back.png', position: [100,700]})
+    @level_select_button = LevelSelectButton.new({frame_name: 'back.png', position: [100,700]})
 
     @sprite_batch << @star_green
     @sprite_batch << @star_blue
@@ -37,7 +37,7 @@ class StarMatchLayer < Joybox::Core::Layer
     @sprite_batch << @box_green
     @sprite_batch << @box_blue
     @sprite_batch << @box_red
-    @sprite_batch << @back_button
+    @sprite_batch << @level_select_button
 
     @stars = Array.new
     [@star_green, @star_blue, @star_red].each do |s|
@@ -60,8 +60,8 @@ class StarMatchLayer < Joybox::Core::Layer
         end
       end
 
-      if @back_button.touched?(touch.location)
-        @back_button.load_home
+      if @level_select_button.touched?(touch.location)
+        @level_select_button.load_home
       end
     end
 
