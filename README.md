@@ -12,5 +12,5 @@ Level select:
 ![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/level_select.png?raw=true)
 
 Drag and drop the star onto the correct colour
-![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/star_drop.png)
+![](https://github.com/RyanonRails/gem_sort/blob/snapshots/screenshots/star_drop.png?raw=true)
 
